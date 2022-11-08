@@ -1,1 +1,2 @@
-worker: node ./src/server.ts
+worker: npm install
+web: npm run dev
