@@ -11,6 +11,7 @@ const game_1 = require("./routes/game");
 const auth_1 = require("./routes/auth");
 const guess_1 = require("./routes/guess");
 const user_1 = require("./routes/user");
+const main_1 = require("./routes/main");
 async function bootstrap() {
     const fastify = (0, fastify_1.default)({
         logger: true,
@@ -26,6 +27,7 @@ async function bootstrap() {
     await fastify.register(guess_1.guessRoutes);
     await fastify.register(pool_1.poolRoutes);
     await fastify.register(user_1.userRoutes);
+    await fastify.register(main_1.mainRoute);
     await fastify.listen({ port: 3333, host: '0.0.0.0' });
 }
 bootstrap();
